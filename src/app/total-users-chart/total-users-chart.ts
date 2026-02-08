@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import Chart from 'chart.js/auto';
+
 
 import {
   ApexAxisChartSeries,
@@ -38,7 +40,8 @@ export type ChartOptions = {
   imports: [
     CommonModule,
     MatCardModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    // Chart
   ],
   templateUrl: './total-users-chart.html',
   styleUrl: './total-users-chart.scss'

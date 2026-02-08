@@ -1,4 +1,7 @@
-<div class="stats-grid">
+
+
+<div class= "col-12 grid">
+  <div class="col-3">
   <app-stat-card
     icon="shopping_cart"
     value="155k"
@@ -7,33 +10,89 @@
     trend="up"
     color="#673ab7"
   ></app-stat-card>
+    </div>
 
+
+    <div class="col-3 ">
   <app-stat-card
-    icon="paid"
+    icon="shopping_bag"
     value="$13.4k"
     label="Total Sales"
     change="+38%"
     trend="up"
     color="#4caf50"
   ></app-stat-card>
-
+    </div>
+  <div class="col-3">
   <app-stat-card
-    icon="trending_down"
-    value="$88.5k"
-    label="Total Profit"
-    change="-18%"
-    trend="down"
-    color="#f44336"
-  ></app-stat-card>
+  icon=""
+  value="$88.5k"
+  label="Total Profit"
+  change="-18%"
+  trend="down"
+  color="#f44336">
+  <svg width="160" height="130" viewBox="0 0 64 64">
 
+    <rect x="4" y="8" width="3" height="20" rx="2" fill="#5f6368"/>
+    <rect x="12" y="14" width="3" height="14" rx="2" fill="#5f6368"/>
+    <rect x="20" y="4" width="3" height="24" rx="2" fill="#5f6368"/>
+    <rect x="28" y="10" width="3" height="18" rx="2" fill="#5f6368"/>
+
+    <rect x="4" y="28" width="3" height="8" rx="2" fill="#f44336"/>
+    <rect x="12" y="28" width="3" height="6" rx="2" fill="#f44336"/>
+    <rect x="20" y="28" width="3" height="10" rx="2" fill="#f44336"/>
+    <rect x="28" y="28" width="3" height="8" rx="2" fill="#f44336"/>
+
+  </svg>
+
+</app-stat-card>
+
+    </div>
+
+  <div class="col-3">
   <app-stat-card
-    icon="trending_up"
+    icon=""
     value="$27.9k"
     label="Total Growth"
     change="+16%"
     trend="up"
     color="#4caf50"
-  ></app-stat-card>
+  >
+   <svg width="85" height="85" viewBox="0 0 120 120">
+
+      <circle cx="60" cy="60" r="45"
+        stroke="#e0e0e0"
+        stroke-width="10"
+        fill="none" />
+
+      <circle cx="60" cy="60" r="45"
+        stroke="#5c6bc0"
+        stroke-width="10"
+        fill="none"
+        stroke-dasharray="180 283"
+        transform="rotate(-90 60 60)" />
+
+      <circle cx="60" cy="60" r="45"
+        stroke="#4caf50"
+        stroke-width="10"
+        fill="none"
+        stroke-dasharray="80 283"
+        transform="rotate(90 60 60)" />
+
+       <text
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        font-size="18"
+        fill="#333">
+        12%
+      </text>
+
+    </svg>
+
+</app-stat-card>
+  </div>
 </div>
 
 <div class="charts-row col-12  flex">

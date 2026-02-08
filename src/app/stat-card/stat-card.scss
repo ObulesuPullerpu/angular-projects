@@ -55,3 +55,8 @@ stat {
     background: #66bb6a;
   }
 }
+.stat-card {
+  height: 220px;   /* fixed height (change as needed) */
+  display: flex;
+  flex-direction: column;
+}

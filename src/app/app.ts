@@ -64,15 +64,14 @@ formGroup:any;
    @ViewChildren('createbutton')
   createbutton :ElementRef;
   normalList:any;
-
   items: any[] = [];
-   items1:any[]=[];
-  newObserverList: any;
-recentExpanded:boolean=false;
+  items1:any[]=[];
+   newObserverList: any;
+  recentExpanded:boolean=false;
+  showOverlay = false;
+
   constructor(
 public globalService:GlobalService
-
-
   ){
       this.items = [
     'Apple',

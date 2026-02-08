@@ -7,20 +7,64 @@
     <mat-card-subtitle>Payments</mat-card-subtitle>
   </mat-card-header>
 
-  <mat-card-content>
-    <div class="chart-container">
-      <canvas baseChart
-        [data]="doughnutChartData"
-        [options]="doughnutChartOptions"
-        [type]="doughnutChartType">
-      </canvas>
-    </div>
+<div class="donut-wrapper">
 
-    <div class="legend-override" *ngIf="false"> 
-      <!-- optional custom legend if needed -->
-      <!-- You can build custom legend here if default doesn't fit perfectly -->
-    </div>
-  </mat-card-content>
+  <!-- DONUT CHART -->
+  <svg viewBox="0 0 200 200" class="donut">
+
+    <!-- Blue (Server 20%) -->
+    <circle
+      cx="100"
+      cy="100"
+      r="70"
+      stroke="#3f8fd2"
+      stroke-width="30"
+      fill="none"
+      stroke-dasharray="88 440"
+      stroke-linecap="round"
+      transform="rotate(-90 100 100)"
+    />
+
+    <!-- Green (Hosting 40%) -->
+    <circle
+      cx="100"
+      cy="100"
+      r="70"
+      stroke="#4caf50"
+      stroke-width="30"
+      fill="none"
+      stroke-dasharray="176 440"
+      stroke-linecap="round"
+      transform="rotate(-10 100 100)"
+    />
+
+    <!-- Orange (Services 15%) -->
+    <circle
+      cx="100"
+      cy="100"
+      r="70"
+      stroke="#ff9800"
+      stroke-width="30"
+      fill="none"
+      stroke-dasharray="66 440"
+      stroke-linecap="round"
+      transform="rotate(150 100 100)"
+    />
+
+  </svg>
+
+  <!-- LEGEND -->
+  <div class="legend">
+
+    <div><span class="dot blue"></span> SERVER (20%)</div>
+    <div><span class="dot green"></span> HOSTING (40%)</div>
+    <div><span class="dot orange"></span> SERVICES (15%)</div>
+    <div><span class="dot grey"></span> OTHERS (15%)</div>
+
+  </div>
+
+</div>
+
 
   <mat-card-actions align="end">
     <button mat-button color="primary">SEE DETAILS →</button>

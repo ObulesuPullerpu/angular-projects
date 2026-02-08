@@ -1,121 +1,159 @@
 <mat-sidenav-container class="container" autosize>
-
-  <!-- LEFT SIDEBAR -->
   <mat-sidenav mode="side" opened class="sidebar">
     <div class="sidebar-header">
       <h2>ByeWind</h2>
     </div>
-    <!-- Favorites & Recently tabs -->
   <div class="tabs-container">
     <div class="tabs">
       <button class="tab active">Favorites</button>
-      <button class="tab">Recently</button>
+      <button class="tab opacity-40">Recently</button>
     </div>
-
-    <!-- List under active tab -->
-    <mat-nav-list class="compact-list">
-      <a mat-list-item class="active">
-        <mat-icon>dashboard</mat-icon>
-        <span>Overview</span>
-      </a>
-      <a mat-list-item>
-        <mat-icon>folder</mat-icon>
-        <span>Projects</span>
-      </a>
-    </mat-nav-list>
   </div>
 
     <mat-nav-list>
-      <a mat-list-item class="active">
-        <mat-icon>dashboard</mat-icon>
-        <span>Overview</span>
-      </a>
-      <a mat-list-item>
-        <mat-icon>folder</mat-icon>
-        <span>Projects</span>
-      </a>
+      <!-- Favorites -->
+       <a mat-list-item class="list-item-dot">
+  <span>Overview</span>
+</a>
 
-      <h3 matSubheader>Dashboards</h3>
-      <a mat-list-item class="active">
-        <mat-icon>analytics</mat-icon>
-        <span>Overview</span>
-      </a>
-      <a mat-list-item>
-        <mat-icon>shopping_cart</mat-icon>
-        <span>eCommerce</span>
-      </a>
-      <a mat-list-item>
-        <mat-icon>school</mat-icon>
-        <span>Online Courses</span>
-      </a>
-
-      <h3 matSubheader>Pages</h3>
-      <a mat-list-item>
-        <mat-icon>person</mat-icon>
-        <span>Account</span>
-      </a>
-<!-- Most balanced & modern combo (2025–2026 style) -->
-<a mat-list-item> <mat-icon>person</mat-icon>          <span>User Profile</span> </a>
-<a mat-list-item> <mat-icon>manage_accounts</mat-icon> <span>Account</span>        </a>
-<a mat-list-item> <mat-icon>business</mat-icon>        <span>Corporate</span>     </a>
-<a mat-list-item> <mat-icon>article</mat-icon>         <span>Blog</span>          </a>
-<a mat-list-item> <mat-icon>group</mat-icon>           <span>Social</span>        </a>
+<a mat-list-item class="list-item-dot">
+  <span>Projects</span>
+</a>
 
 
-      <!-- <a mat-list-item>
-  <mat-icon>manage_accounts</mat-icon>  
+<!-- <a mat-list-item>
+  <mat-icon>radio_button_unchecked</mat-icon>
+  <span>Overview</span>
+</a>
+
+<a mat-list-item>
+  <mat-icon>folder</mat-icon>
+  <span>Projects</span>
+</a> -->
+
+<!-- Dashboards -->
+<h3 matSubheader class="opacity-40">Dashboards</h3>
+
+<a mat-list-item class="active">
+  <mat-icon>pie_chart</mat-icon>
+  <span>Overview</span>
+</a>
+
+<!-- Dashboards -->
+
+<a mat-list-item class="menu-item">
+  <mat-icon class="expand-icon">chevron_right</mat-icon>
+  <mat-icon>inventory_2</mat-icon>
+  <span>eCommerce</span>
+</a>
+
+<a mat-list-item class="menu-item">
+  <mat-icon class="expand-icon">chevron_right</mat-icon>
+  <mat-icon>folder</mat-icon>
+  <span>Projects</span>
+</a>
+
+<a mat-list-item class="menu-item">
+  <mat-icon class="expand-icon">chevron_right</mat-icon>
+  <mat-icon>menu_book</mat-icon>
+  <span>Online Courses</span>
+</a>
+
+<!-- Pages -->
+<h3 matSubheader class="opacity-40">Pages</h3>
+
+<a mat-list-item class="menu-item">
+  <mat-icon class="expand-icon">chevron_right</mat-icon>
+  <mat-icon>badge</mat-icon>
+  <span>User Profile</span>
+</a>
+
+<a mat-list-item class="menu-item">
+  <mat-icon class="expand-icon">chevron_right</mat-icon>
+  <mat-icon>manage_accounts</mat-icon>
   <span>Account</span>
 </a>
 
-<a mat-list-item>
-  <mat-icon>business</mat-icon>        
+<a mat-list-item class="menu-item">
+  <mat-icon class="expand-icon">chevron_right</mat-icon>
+  <mat-icon>groups</mat-icon>
   <span>Corporate</span>
 </a>
 
-<a mat-list-item>
-  <mat-icon>article</mat-icon>         
+<a mat-list-item class="menu-item">
+  <mat-icon class="expand-icon">chevron_right</mat-icon>
+  <mat-icon>article</mat-icon>
   <span>Blog</span>
 </a>
 
-<a mat-list-item>
-  <mat-icon>group</mat-icon>            
+<a mat-list-item class="menu-item">
+  <mat-icon class="expand-icon">chevron_right</mat-icon>
+  <mat-icon>forum</mat-icon>
   <span>Social</span>
-</a> -->
-        <!-- <a mat-list-item>
-        <mat-icon>person</mat-icon>
-        <span>Corporate</span>
-      </a>
-        <a mat-list-item>
-        <mat-icon>person</mat-icon>
-        <span>Blog</span>
-      </a>
-        <a mat-list-item>
-        <mat-icon>person</mat-icon>
-        <span>Social</span>
-      </a> -->
-      <!-- Add more items as needed -->
+</a>
+
     </mat-nav-list>
   </mat-sidenav>
-
-  <!-- MAIN CONTENT -->
   <mat-sidenav-content class="content">
-    <mat-toolbar color="primary">
-      <button mat-icon-button>
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span>Dashboards / Default</span>
-      <span class="spacer"></span>
-      <button mat-icon-button>
+  
+
+  <mat-toolbar class="custom-toolbar">
+
+    <!-- <mat-toolbar
+  class="custom-toolbar"
+  (mouseenter)="showOverlay = true"
+  (mouseleave)="showOverlay = false">
+
+Hover on Toolbar
+  <div class="toolbar-overlay"
+       *ngIf="showOverlay"
+       (mouseenter)="showOverlay = true"
+       (mouseleave)="showOverlay = false">
+
+    <p>Overlay Content</p>
+    <p>Settings</p>
+    <p>Dashboard Options</p>
+
+  </div>
+
+</mat-toolbar> -->
+
+    <div class="toolbar-left">
+      <mat-icon class="star-icon">star_border</mat-icon>
+
+      <span class="breadcrumb">
+        <span class="parent">Dashboards</span>
+        <span class="parent">/</span>
+        <span class="parent">Default</span>
+      </span>
+    </div>
+
+    <span class="spacer"></span>
+
+    <!-- RIGHT SECTION -->
+    <div class="toolbar-right">
+
+      <!-- Search box -->
+      <div class="search-box">
         <mat-icon>search</mat-icon>
+        <input type="text" placeholder="Search">
+      </div>
+
+      <button mat-icon-button>
+        <mat-icon>history</mat-icon>
       </button>
-      <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon>more_vert</mat-icon>
+
+      <button mat-icon-button>
+        <mat-icon>notifications_none</mat-icon>
       </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>Settings</button>
-        <button mat-menu-item>Logout</button>
-      </mat-menu>
-    </mat-toolbar>
+
+      <button mat-icon-button>
+        <mat-icon>dashboard</mat-icon>
+      </button>
+
+    </div>
+
+  </mat-toolbar>
 
     <div class="dashboard-wrapper">
       <app-dashboard></app-dashboard>

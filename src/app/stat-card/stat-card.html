@@ -1,45 +1,26 @@
-<!-- <mat-card class="stat" [style.border-left]="'4px solid ' + color()">
-      <mat-card-content>
-        <div class="icon" [style.background]="color() + '22'">
-          <mat-icon>{{ icon() }}</mat-icon>
-        </div>
-        <div class="value">{{ value() }}</div>
-        <div class="label">{{ label() }}</div>
-        <div class="change" [ngClass]="trend()">
-          {{ change() }}
-          <mat-icon *ngIf="trend() === 'up'">arrow_upward</mat-icon>
-          <mat-icon *ngIf="trend() === 'down'">arrow_downward</mat-icon>
-        </div>
-      </mat-card-content>
-    </mat-card>
-     -->
+
     <mat-card class="stat-card" [ngStyle]="{'border-left': '4px solid ' + color()}">
   <mat-card-content>
      <div class ="flex flex-wrap">
-    <div class="icon" [style.background]="color() + '22'">
-      <mat-icon>{{ icon() }}</mat-icon>
+    <div *ngIf="icon()" class="icon" [style.background]="color() + '22'">
+      <mat-icon >{{ icon() }}</mat-icon>
       </div>
+      <div *ngIf="!icon()" class="main-row">
+      <div class="value">{{ value() }}</div>
+        <mat-chip disabled>{{ label() }}</mat-chip>
+    </div>
         <div class="change" [ngClass]="trend()">
         {{ change() }}
         <mat-icon *ngIf="trend() === 'up'">arrow_upward</mat-icon>
         <mat-icon *ngIf="trend() === 'down'">arrow_downward</mat-icon>
       </div>
-     
     </div>
 
-    <div class="main-row">
+    <div *ngIf="icon()" class="main-row">
       <div class="value">{{ value() }}</div>
-    
     </div>
-  <mat-chip disabled>{{ label() }}</mat-chip>
-  <!-- Indication lines -->
-    <!-- <div class="indication-lines">
-      <div class="bar short"></div>
-      <div class="bar tall"></div>
-      <div class="bar medium"></div>
-      <div class="bar short"></div>
-      <div class="bar very-short"></div>
-    </div> -->
+  <mat-chip *ngIf="icon()" disabled>{{ label() }}</mat-chip>
+       <ng-content></ng-content>
 
   </mat-card-content>
 </mat-card>
