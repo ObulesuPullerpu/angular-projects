@@ -1,0 +1,299 @@
+<mat-sidenav-container class="container" autosize>
+
+  <!-- LEFT SIDEBAR -->
+  <mat-sidenav mode="side" opened class="sidebar">
+    <div class="sidebar-header">
+      <h2>ByeWind</h2>
+    </div>
+    <!-- Favorites & Recently tabs -->
+  <div class="tabs-container">
+    <div class="tabs">
+      <button class="tab active">Favorites</button>
+      <button class="tab">Recently</button>
+    </div>
+
+    <!-- List under active tab -->
+    <mat-nav-list class="compact-list">
+      <a mat-list-item class="active">
+        <mat-icon>dashboard</mat-icon>
+        <span>Overview</span>
+      </a>
+      <a mat-list-item>
+        <mat-icon>folder</mat-icon>
+        <span>Projects</span>
+      </a>
+    </mat-nav-list>
+  </div>
+
+    <mat-nav-list>
+      <a mat-list-item class="active">
+        <mat-icon>dashboard</mat-icon>
+        <span>Overview</span>
+      </a>
+      <a mat-list-item>
+        <mat-icon>folder</mat-icon>
+        <span>Projects</span>
+      </a>
+
+      <h3 matSubheader>Dashboards</h3>
+      <a mat-list-item class="active">
+        <mat-icon>analytics</mat-icon>
+        <span>Overview</span>
+      </a>
+      <a mat-list-item>
+        <mat-icon>shopping_cart</mat-icon>
+        <span>eCommerce</span>
+      </a>
+      <a mat-list-item>
+        <mat-icon>school</mat-icon>
+        <span>Online Courses</span>
+      </a>
+
+      <h3 matSubheader>Pages</h3>
+      <a mat-list-item>
+        <mat-icon>person</mat-icon>
+        <span>Account</span>
+      </a>
+<!-- Most balanced & modern combo (2025–2026 style) -->
+<a mat-list-item> <mat-icon>person</mat-icon>          <span>User Profile</span> </a>
+<a mat-list-item> <mat-icon>manage_accounts</mat-icon> <span>Account</span>        </a>
+<a mat-list-item> <mat-icon>business</mat-icon>        <span>Corporate</span>     </a>
+<a mat-list-item> <mat-icon>article</mat-icon>         <span>Blog</span>          </a>
+<a mat-list-item> <mat-icon>group</mat-icon>           <span>Social</span>        </a>
+
+
+      <!-- <a mat-list-item>
+  <mat-icon>manage_accounts</mat-icon>  
+  <span>Account</span>
+</a>
+
+<a mat-list-item>
+  <mat-icon>business</mat-icon>        
+  <span>Corporate</span>
+</a>
+
+<a mat-list-item>
+  <mat-icon>article</mat-icon>         
+  <span>Blog</span>
+</a>
+
+<a mat-list-item>
+  <mat-icon>group</mat-icon>            
+  <span>Social</span>
+</a> -->
+        <!-- <a mat-list-item>
+        <mat-icon>person</mat-icon>
+        <span>Corporate</span>
+      </a>
+        <a mat-list-item>
+        <mat-icon>person</mat-icon>
+        <span>Blog</span>
+      </a>
+        <a mat-list-item>
+        <mat-icon>person</mat-icon>
+        <span>Social</span>
+      </a> -->
+      <!-- Add more items as needed -->
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- MAIN CONTENT -->
+  <mat-sidenav-content class="content">
+    <mat-toolbar color="primary">
+      <button mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Dashboards / Default</span>
+      <span class="spacer"></span>
+      <button mat-icon-button>
+        <mat-icon>search</mat-icon>
+      </button>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Settings</button>
+        <button mat-menu-item>Logout</button>
+      </mat-menu>
+    </mat-toolbar>
+
+    <div class="dashboard-wrapper">
+      <app-dashboard></app-dashboard>
+    </div>
+  </mat-sidenav-content>
+
+  <!-- RIGHT NOTIFICATIONS PANEL -->
+
+  <!-- <mat-sidenav mode="side" position="end" opened class="notifications-panel">
+
+
+
+    <h3>Notifications</h3>
+    <div class="notification">
+      <mat-icon>bug_report</mat-icon>
+      <div>You fixed a bug. <small>Just now</small></div>
+    </div>
+    <div class="notification">
+      <mat-icon>person_add</mat-icon>
+      <div>New user registered. <small>59 minutes ago</small></div>
+    </div>
+
+    <h3>Activities</h3>
+    <div class="activity">Changed the style. <small>Just now</small></div>
+  </mat-sidenav> -->
+<mat-sidenav mode="side" position="end" opened class="notifications-panel">
+
+  <!-- Notifications -->
+  <h3 class="panel-title">Notifications</h3>
+
+  <div class="notification-item hover-highlight">
+    <mat-icon class="icon bug">bug_report</mat-icon>
+    <div class="content">
+      <div class="message">You fixed a bug.</div>
+      <div class="time">Just now</div>
+    </div>
+  </div>
+
+  <div class="notification-item hover-highlight">
+    <mat-icon class="icon user-add">person_add</mat-icon>
+    <div class="content">
+      <div class="message">New user registered.</div>
+      <div class="time">59 minutes ago</div>
+    </div>
+  </div>
+
+  <div class="notification-item hover-highlight">
+    <mat-icon class="icon bug">bug_report</mat-icon>
+    <div class="content">
+      <div class="message">You fixed a bug.</div>
+      <div class="time">12 hours ago</div>
+    </div>
+  </div>
+
+  <div class="notification-item hover-highlight">
+    <div class="avatar-circle" style="background: #e91e63;">AL</div>
+    <div class="content">
+      <div class="message">
+        <strong>Andi Lane</strong> subscribed to you.
+      </div>
+      <div class="time">Today, 11:59 AM</div>
+    </div>
+  </div>
+
+  <!-- Activities -->
+  <h3 class="panel-title">Activities</h3>
+
+  <div class="activity-timeline">
+    <div class="activity-item hover-highlight">
+      <div class="avatar-circle" style="background: #ff9800;">CS</div>
+      <div class="content">
+        <div class="message">Changed the style.</div>
+        <div class="time">Just now</div>
+      </div>
+    </div>
+
+    <div class="activity-item hover-highlight">
+      <div class="avatar-circle" style="background: #4caf50;">RN</div>
+      <div class="content">
+        <div class="message">Released a new version.</div>
+        <div class="time">59 minutes ago</div>
+      </div>
+    </div>
+
+    <div class="activity-item hover-highlight">
+      <div class="avatar-circle" style="background: #f44336;">SB</div>
+      <div class="content">
+        <div class="message">Submitted a bug.</div>
+        <div class="time">12 hours ago</div>
+      </div>
+    </div>
+
+    <div class="activity-item hover-highlight">
+      <div class="avatar-circle" style="background: #2196f3;">MD</div>
+      <div class="content">
+        <div class="message">Modified A data in Page X.</div>
+        <div class="time">Today, 11:59 AM</div>
+      </div>
+    </div>
+
+    <div class="activity-item hover-highlight">
+      <div class="avatar-circle" style="background: #9c27b0;">DP</div>
+      <div class="content">
+        <div class="message">Deleted a page in Project X.</div>
+        <div class="time">Feb 2, 2024</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent contacts -->
+  <div class="recent-contacts-section">
+    <div class="section-header hover-highlight" (click)="recentExpanded = !recentExpanded">
+      <mat-icon class="chevron">{{ recentExpanded ? 'expand_less' : 'expand_more' }}</mat-icon>
+      <span>Recent contacts</span>
+    </div>
+
+    <div class="contacts-list" [ngClass]="{ expanded: recentExpanded }">
+      <div class="contact-item hover-highlight" 
+           [ngClass]="{ 'selected': selectedContact === 'Natali Craig' }" 
+           (click)="selectContact('Natali Craig')">
+        <div class="avatar" style="background: #9575cd;">
+          <img src="https://ui-avatars.com/api/?name=Natali+Craig&background=9575cd&color=fff&size=128" alt="">
+        </div>
+        <span class="name">Natali Craig</span>
+      </div>
+
+      <div class="contact-item hover-highlight" 
+           [ngClass]="{ 'selected': selectedContact === 'Drew Cano' }" 
+           (click)="selectContact('Drew Cano')">
+        <div class="avatar" style="background: #64b5f6;">
+          <img src="https://ui-avatars.com/api/?name=Drew+Cano&background=64b5f6&color=fff&size=128" alt="">
+        </div>
+        <span class="name">Drew Cano</span>
+      </div>
+
+      <div class="contact-item selected hover-highlight" 
+           (click)="selectContact('Andi Lane')">
+        <div class="avatar" style="background: #4db6ac;">
+          <img src="https://ui-avatars.com/api/?name=Andi+Lane&background=4db6ac&color=fff&size=128" alt="">
+        </div>
+        <span class="name">Andi Lane</span>
+      </div>
+
+      <div class="contact-item hover-highlight" 
+           [ngClass]="{ 'selected': selectedContact === 'Koray Okumus' }" 
+           (click)="selectContact('Koray Okumus')">
+        <div class="avatar" style="background: #ffb74d;">
+          <img src="https://ui-avatars.com/api/?name=Koray+Okumus&background=ffb74d&color=000&size=128" alt="">
+        </div>
+        <span class="name">Koray Okumus</span>
+      </div>
+
+      <div class="contact-item hover-highlight" 
+           [ngClass]="{ 'selected': selectedContact === 'Kate Morrison' }" 
+           (click)="selectContact('Kate Morrison')">
+        <div class="avatar" style="background: #f06292;">
+          <img src="https://ui-avatars.com/api/?name=Kate+Morrison&background=f06292&color=fff&size=128" alt="">
+        </div>
+        <span class="name">Kate Morrison</span>
+      </div>
+
+      <div class="contact-item hover-highlight" 
+           [ngClass]="{ 'selected': selectedContact === 'Melody Macy' }" 
+           (click)="selectContact('Melody Macy')">
+        <div class="avatar" style="background: #ba68c8;">
+          <img src="https://ui-avatars.com/api/?name=Melody+Macy&background=ba68c8&color=fff&size=128" alt="">
+        </div>
+        <span class="name">Melody Macy</span>
+      </div>
+    </div>
+
+    <!-- Favourite contacts -->
+    <div class="section-header hover-highlight">
+      <mat-icon class="chevron">chevron_right</mat-icon>
+      <span>Favourite contacts</span>
+    </div>
+  </div>
+
+</mat-sidenav>
+
+</mat-sidenav-container>

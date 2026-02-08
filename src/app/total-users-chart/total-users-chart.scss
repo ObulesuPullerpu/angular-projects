@@ -1,0 +1,71 @@
+// .chart-card {
+//   height: 100%;
+//   border-radius: 12px;
+//   overflow: hidden;
+//   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+
+//   mat-card-header {
+//     padding: 16px 24px;
+//     border-bottom: 1px solid #eee;
+
+//     mat-card-title {
+//       font-size: 1.25rem;
+//       font-weight: 600;
+//       margin: 0;
+
+//       small {
+//         font-size: 0.85rem;
+//         color: #757575;
+//         font-weight: normal;
+//         margin-left: 8px;
+//       }
+//     }
+//   }
+
+//   mat-card-content {
+//     padding: 0;
+//   }
+// }
+
+// .chart-container {
+//   height: 380px;
+//   width: 100%;
+//   padding: 16px 8px 24px;
+// }
+
+
+.chart-card {
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  mat-card-header {
+    padding: 16px 24px;
+    border-bottom: 1px solid #eee;
+
+    mat-card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0;
+
+      small {
+        font-size: 0.85rem;
+        color: #757575;
+        font-weight: normal;
+        margin-left: 12px;
+      }
+    }
+  }
+
+  mat-card-content {
+    padding: 0;
+    height: 380px;
+  }
+}
+
+.chart-container {
+  height: 100%;
+  width: 100%;
+  padding: 16px 8px 24px;
+}

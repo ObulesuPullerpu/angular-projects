@@ -1,0 +1,82 @@
+.conversations-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 80%;
+
+  &.sent {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+  }
+}
+
+.bubble {
+  padding: 10px 14px;
+  border-radius: 18px;
+  background: #e0e0e0;
+  position: relative;
+
+  &.sent .bubble {
+    background: #bbdefb; // light blue for sent
+    color: #000;
+  }
+
+  p { margin: 0; }
+  .sender { font-weight: 600; display: block; margin-bottom: 4px; font-size: 0.9rem; }
+  .time { font-size: 0.75rem; color: #757575; display: block; margin-top: 4px; text-align: right; }
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+}
+
+.sent-avatar {
+  background: #3f51b5;
+  color: white;
+}
+
+.input-area {
+  padding: 8px 16px;
+  border-top: 1px solid #eee;
+
+  .full-width { width: 100%; }
+}
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #bdbdbd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.avatar-icon {
+  font-size: 20px !important;
+  width: 20px !important;
+  height: 20px !important;
+  line-height: 20px !important;
+}
+.more-btn {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}

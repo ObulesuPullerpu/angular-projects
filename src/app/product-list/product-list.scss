@@ -1,0 +1,329 @@
+.products-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  
+  .more-btn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 16px 24px 8px;
+  font-weight: 600;
+  color: #757575;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #eee;
+
+  .header-cell {
+    text-transform: uppercase;
+  }
+}
+
+.transaction-list {
+  padding: 0;
+  .transaction-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid #eee;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background: rgba(0,0,0,0.03);
+    }
+  }
+}
+
+.info-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .name {
+    font-weight: 500;
+  }
+}
+
+.date-cell, .amount-cell {
+  color: #424242;
+  font-weight: 500;
+}
+
+.status-cell {
+  display: flex;
+  justify-content: flex-end;
+
+  .status-chip {
+    font-size: 0.85rem;
+    height: 28px;
+    min-height: 28px;
+    padding: 0 12px;
+  }
+}
+
+// Custom status colors (override Material defaults if needed)
+.status-complete  { background-color: #4caf50 !important; color: white !important; }
+.status-inprogress { background-color: #2196f3 !important; color: white !important; }
+.status-pending   { background-color: #ff9800 !important; color: white !important; }
+.status-approved  { background-color: #4caf50 !important; color: white !important; }
+.status-rejected  { background-color: #f44336 !important; color: white !important; }
+
+.products-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  .more-btn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+}
+
+// .table-header {
+//   display: grid;
+//   grid-template-columns: 2fr 1fr 1fr 1fr;
+//   padding: 16px 24px 8px;
+//   font-size: 0.85rem;
+//   font-weight: 600;
+//   color: #757575;
+//   text-transform: uppercase;
+//   letter-spacing: 0.5px;
+//   border-bottom: 1px solid #eee;
+// }
+
+// .transaction-list {
+//   padding: 0;
+
+//   .transaction-row {
+//     display: grid;
+//     grid-template-columns: 2fr 1fr 1fr 1fr;
+//     align-items: center;
+//     padding: 16px 24px;
+//     border-bottom: 1px solid #eee;
+//     transition: background 0.2s;
+
+//     &:hover {
+//       background: rgba(0, 0, 0, 0.03);
+//     }
+
+//     &:last-child {
+//       border-bottom: none;
+//     }
+//   }
+
+//   .empty-row {
+//     justify-content: center;
+//     color: #999;
+//     font-style: italic;
+//   }
+// }
+
+// .info-cell {
+//   display: flex;
+//   align-items: center;
+//   gap: 14px;
+
+//   .initials-circle {
+//     width: 42px;
+//     height: 42px;
+//     border-radius: 50%;
+//     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+//     color: white;
+//     font-weight: 600;
+//     font-size: 0.95rem;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-shrink: 0;
+//     box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+//   }
+
+//   .name {
+//     font-weight: 500;
+//     color: #333;
+//   }
+// }
+
+// .date-cell,
+// .amount-cell {
+//   color: #424242;
+//   font-weight: 500;
+// }
+
+// .status-cell {
+//   display: flex;
+//   justify-content: flex-end;
+// }
+
+// .status-chip {
+//   font-size: 0.85rem;
+//   min-height: 28px;
+//   padding: 0 12px;
+// }
+
+// :host ::ng-deep {
+//   .p-card {
+//     border-radius: 12px;
+//     overflow: hidden;
+//     box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important;
+
+//     .p-card-header {
+//       padding: 16px 24px;
+//       position: relative;
+
+//       .header-actions {
+//         position: absolute;
+//         right: 16px;
+//         top: 16px;
+//       }
+//     }
+
+//     .p-card-body {
+//       padding: 0;
+//     }
+//   }
+
+//   .p-datatable {
+//     border: none;
+
+//     .p-datatable-thead > tr > th {
+//       background: #f8f9fa;
+//       color: #495057;
+//       font-weight: 600;
+//       padding: 12px 24px;
+//       border: none;
+//       border-bottom: 1px solid #dee2e6;
+//     }
+
+//     .p-datatable-tbody > tr {
+//       transition: background-color 0.2s;
+
+//       &:hover {
+//         background: rgba(0,0,0,0.03);
+//       }
+
+//       > td {
+//         padding: 16px 24px;
+//         border: none;
+//         border-bottom: 1px solid #dee2e6;
+//       }
+//     }
+//   }
+// }
+
+// .name-cell {
+//   display: flex;
+//   align-items: center;
+//   gap: 12px;
+
+ 
+
+//   .name {
+//     font-weight: 500;
+//   }
+// }
+
+// .amount-cell {
+//   font-weight: 500;
+//   color: #1e293b;
+// }
+
+// .status-tag {
+//   font-size: 0.875rem;
+//   padding: 0.25rem 0.75rem;
+// }
+
+// .empty-message {
+//   text-align: center;
+//   color: #6b7280;
+//   padding: 32px;
+//   font-style: italic;
+// }
+
+
+.container { height: 100vh; }
+
+.sidebar {
+  width: 240px;
+  background: #f8f9fa;
+  border-right: 1px solid #e0e0e0;
+}
+
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+h2 { margin: 0; font-size: 1.6rem; font-weight: 600; }
+
+.active { 
+  background: rgba(63, 81, 181, 0.1); 
+  color: #3f51b5; 
+}
+
+/* === ADD THIS NEW SECTION === */
+.sidebar mat-nav-list a.mat-list-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px;
+}
+
+.sidebar mat-nav-list mat-icon {
+  font-size: 24px !important;
+  width: 24px !important;
+  height: 24px !important;
+  flex-shrink: 0;
+}
+
+.sidebar mat-nav-list span {
+  line-height: 1.4;
+}
+/* === END OF FIX === */
+
+.content { display: flex; flex-direction: column; }
+mat-toolbar { flex-shrink: 0; }
+.dashboard-wrapper { padding: 24px; flex: 1; overflow: auto; }
+.spacer { flex: 1 1 auto; }
+.notifications-panel { width: 320px; background: #fafafa; border-left: 1px solid #e0e0e0; padding: 16px; }
+.notification, .activity { display: flex; align-items: center; gap: 12px; padding: 12px 8px; border-bottom: 1px solid #eee; }
+small { margin-left: auto; color: #757575; font-size: 0.2rem; }
+ .initial-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .name-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+ 
+
+  .name {
+    font-weight: 500;
+  }
+}

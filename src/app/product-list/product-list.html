@@ -1,0 +1,57 @@
+
+<p-card  
+ [style]="{ 'border-radius': '12px', 'overflow': 'hidden' }" 
+ class="products-card"
+
+ >
+<div class="justify-content-between">
+  <div class="">Products</div>
+   <button 
+   mat-icon-button
+    class="more-btn"
+    >
+    <mat-icon>more_horiz</mat-icon></button>
+</div>
+ <div class="mt-2">
+  <p-table
+    [value]="transactions"
+     stripedRows
+  >
+  <ng-template pTemplate="header">
+      <tr>
+        <th>Info</th>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Status</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-tx>
+      <tr class="p-1">
+        <td>
+          <div class="name-cell">
+            <div class="initial-circle" [style.backgroundColor]="getInitialColor(tx.name)">
+              {{ getInitials(tx.name) }}
+            </div>
+            <span class="name">{{ tx.name }}</span>
+          </div>
+        </td>
+        <td   >{{ tx.date }}</td>
+        <td class="amount-cell">{{ tx.amount }}</td>
+        <td>
+          <p-tag
+          [value]="tx.status"
+          [styleClass]="getStatusClass(tx.status)"
+          ></p-tag>
+        </td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="4" class="empty-message">No transactions found.</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+
+</p-card>

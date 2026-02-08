@@ -1,0 +1,38 @@
+<mat-card class="conversations-card">
+  <mat-card-header>
+    <mat-card-title class="font-weight:400px">Recent Conversations</mat-card-title>
+    <button mat-icon-button class="more-btn"><mat-icon>more_horiz</mat-icon></button>
+  </mat-card-header>
+<mat-card-content class="chat-content p-3">
+  @for (msg of messages; track $index) {
+    <div class="message" [ngClass]="{ sent: msg.isMe, received: !msg.isMe }">
+
+     <div *ngIf="!msg.isMe" class="avatar" [style.background-image]="'url(' + (msg.avatar ?? '') + ')'">
+        <span *ngIf="!msg.avatar">{{ msg.sender?.charAt(0) | uppercase }}</span>
+      </div>
+
+      <div class="bubble">
+        <span class="sender" *ngIf="!msg.isMe">{{ msg.sender }}</span>
+        <p>{{ msg.text }}</p>
+        <span class="time">{{ msg.time }}</span>
+      </div>
+
+      <div *ngIf="msg.isMe" class="avatar sent-avatar">
+        <span>You</span>
+      </div>
+
+    </div>
+  } @empty {
+    <div class="empty-chat">No messages yet</div>
+  }
+</mat-card-content>
+  <mat-card-actions class="input-area">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Enter your text</mat-label>
+      <input matInput [(ngModel)]="newMessage" (keyup.enter)="sendMessage()">
+      <button mat-icon-button matSuffix color="primary" (click)="sendMessage()" [disabled]="!newMessage">
+        <mat-icon>send</mat-icon>
+      </button>
+    </mat-form-field>
+  </mat-card-actions>
+</mat-card>

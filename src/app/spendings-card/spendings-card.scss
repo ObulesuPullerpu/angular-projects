@@ -1,0 +1,15 @@
+.spendings-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.chart-container {
+  position: relative;
+  height: 220px;
+  margin: 16px 0;
+}
+.more-btn {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}

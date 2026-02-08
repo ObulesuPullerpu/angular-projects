@@ -1,0 +1,59 @@
+
+<mat-card >
+<div class="best-selling-section ">
+  <div class="header">
+    <h2>Best Selling Product</h2>
+  </div>
+
+  <div class="carousel-wrapper">
+    <button mat-icon-button class="nav-btn left" (click)="scrollLeft(productsContainer)">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+
+    <div class="products-container" #productsContainer>
+      @for (product of products; track $index) {
+        <mat-card class="product-card" [ngClass]="{ 'on-sale': product.isOnSale }">
+          @if (product.isOnSale) {
+            <div class="sale-ribbon">Sale</div>
+          }
+
+          <div class="image-container">
+            <!-- <img [src]="product.imageUrl" 
+             /> -->
+          </div>
+
+          <mat-card-content>
+             <!-- <div class="product-name">{{ product?.name }}</div>  -->
+            <div class="product-desc">{{ product?.description }}</div>
+
+            <div class="price-row">
+              <span class="original-price" *ngIf="product.isOnSale">
+                ${{ product.originalPrice.toFixed(2) }}
+              </span>
+              <span class="sale-price">
+                ${{ product.salePrice.toFixed(2) }}
+              </span>
+            </div>
+
+            <div class="rating">
+              @for (star of getStarArray(product.rating); track $index) {
+                <mat-icon [ngClass]="{
+                  'full': star === 1,
+                  'half': star === 0.5,
+                  'empty': star === 0
+                }">
+                  star
+                </mat-icon>
+              }
+            </div>
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+
+    <button mat-icon-button class="nav-btn right" (click)="scrollRight(productsContainer)">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+</div>
+<mat-card>

@@ -1,0 +1,30 @@
+<mat-card class="review-card">
+  <mat-card-header>
+    <mat-card-title>
+      <mat-icon>chat</mat-icon> Customer Reviews
+      <button mat-icon-button class="more-btn"><mat-icon>more_horiz</mat-icon></button>
+    </mat-card-title>
+    <mat-card-subtitle>Messages</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    @for (review of reviews; track review.name) {
+      <div class="review-item">
+        <div class="review-header">
+          <strong>{{ review.name }}</strong>
+          <span class="time">{{ review.time }}</span>
+          <span class="stars">
+            @for (star of [1,2,3,4,5]; track star) {
+              <mat-icon [ngClass]="{ 'filled': star <= review.rating }">star</mat-icon>
+            }
+          </span>
+        </div>
+        <p>{{ review.text }}</p>
+      </div>
+    }
+  </mat-card-content>
+
+  <mat-card-actions align="end">
+    <button mat-button color="primary">SEE ALL REVIEWS →</button>
+  </mat-card-actions>
+</mat-card>

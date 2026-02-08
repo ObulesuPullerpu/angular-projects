@@ -1,0 +1,83 @@
+<div class="stats-grid">
+  <app-stat-card
+    icon="shopping_cart"
+    value="155k"
+    label="Total Orders"
+    change="+22%"
+    trend="up"
+    color="#673ab7"
+  ></app-stat-card>
+
+  <app-stat-card
+    icon="paid"
+    value="$13.4k"
+    label="Total Sales"
+    change="+38%"
+    trend="up"
+    color="#4caf50"
+  ></app-stat-card>
+
+  <app-stat-card
+    icon="trending_down"
+    value="$88.5k"
+    label="Total Profit"
+    change="-18%"
+    trend="down"
+    color="#f44336"
+  ></app-stat-card>
+
+  <app-stat-card
+    icon="trending_up"
+    value="$27.9k"
+    label="Total Growth"
+    change="+16%"
+    trend="up"
+    color="#4caf50"
+  ></app-stat-card>
+</div>
+
+<div class="charts-row col-12  flex">
+  <div class="charts-row col-8">
+  <app-total-users-chart></app-total-users-chart>
+</div>
+
+ <div class="col-4">
+  <mat-card class="chart-side">
+    <mat-card-header>
+      <mat-card-title>Traffic by Website</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ul class="traffic-list">
+        <li>Google <span class="bar" style="width:70%"></span></li>
+        <li>YouTube <span class="bar" style="width:55%"></span></li>
+        <li>Instagram <span class="bar" style="width:40%"></span></li>
+        <li>Pinterest <span class="bar" style="width:30%"></span></li>
+        <li>Facebook <span class="bar" style="width:25%"></span></li>
+        <li>Twitter <span class="bar" style="width:20%"></span></li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+  </div>
+ </div>
+<div class="flex flex-wrap justify-content-evenly mt-3">
+   <div class="col-6">
+  <app-reviews-card></app-reviews-card>
+  </div>
+  <div class="col-6" >
+  <app-spendings-card></app-spendings-card>
+  </div>
+</div>
+<div class="flex flex-wrap">
+  <div class="col-6">
+  <app-task-card></app-task-card>
+  </div>
+   <div class="col-6">
+  <app-conversation-card></app-conversation-card>   
+  </div>
+</div>
+<div>
+ <app-book-selled></app-book-selled>
+</div>
+<div class="mt-2`">
+<app-product-list></app-product-list>
+</div>
