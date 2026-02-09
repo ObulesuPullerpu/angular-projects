@@ -1,7 +1,7 @@
 <mat-sidenav-container class="container" autosize>
   <mat-sidenav mode="side" opened class="sidebar">
     <div class="sidebar-header">
-      <h2>ByeWind</h2>
+      <h2 class="text-xs justify-content-center">ByeWind</h2>
     </div>
   <div class="tabs-container">
     <div class="tabs">
@@ -11,27 +11,12 @@
   </div>
 
     <mat-nav-list>
-      <!-- Favorites -->
        <a mat-list-item class="list-item-dot">
   <span>Overview</span>
 </a>
-
 <a mat-list-item class="list-item-dot">
   <span>Projects</span>
 </a>
-
-
-<!-- <a mat-list-item>
-  <mat-icon>radio_button_unchecked</mat-icon>
-  <span>Overview</span>
-</a>
-
-<a mat-list-item>
-  <mat-icon>folder</mat-icon>
-  <span>Projects</span>
-</a> -->
-
-<!-- Dashboards -->
 <h3 matSubheader class="opacity-40">Dashboards</h3>
 
 <a mat-list-item class="active">
@@ -39,7 +24,6 @@
   <span>Overview</span>
 </a>
 
-<!-- Dashboards -->
 
 <a mat-list-item class="menu-item">
   <mat-icon class="expand-icon">chevron_right</mat-icon>
@@ -59,7 +43,6 @@
   <span>Online Courses</span>
 </a>
 
-<!-- Pages -->
 <h3 matSubheader class="opacity-40">Pages</h3>
 
 <a mat-list-item class="menu-item">
@@ -98,26 +81,6 @@
   
 
   <mat-toolbar class="custom-toolbar">
-
-    <!-- <mat-toolbar
-  class="custom-toolbar"
-  (mouseenter)="showOverlay = true"
-  (mouseleave)="showOverlay = false">
-
-Hover on Toolbar
-  <div class="toolbar-overlay"
-       *ngIf="showOverlay"
-       (mouseenter)="showOverlay = true"
-       (mouseleave)="showOverlay = false">
-
-    <p>Overlay Content</p>
-    <p>Settings</p>
-    <p>Dashboard Options</p>
-
-  </div>
-
-</mat-toolbar> -->
-
     <div class="toolbar-left">
       <mat-icon class="star-icon">star_border</mat-icon>
 
@@ -130,10 +93,8 @@ Hover on Toolbar
 
     <span class="spacer"></span>
 
-    <!-- RIGHT SECTION -->
     <div class="toolbar-right">
 
-      <!-- Search box -->
       <div class="search-box">
         <mat-icon>search</mat-icon>
         <input type="text" placeholder="Search">
@@ -154,34 +115,11 @@ Hover on Toolbar
     </div>
 
   </mat-toolbar>
-
     <div class="dashboard-wrapper">
       <app-dashboard></app-dashboard>
     </div>
   </mat-sidenav-content>
-
-  <!-- RIGHT NOTIFICATIONS PANEL -->
-
-  <!-- <mat-sidenav mode="side" position="end" opened class="notifications-panel">
-
-
-
-    <h3>Notifications</h3>
-    <div class="notification">
-      <mat-icon>bug_report</mat-icon>
-      <div>You fixed a bug. <small>Just now</small></div>
-    </div>
-    <div class="notification">
-      <mat-icon>person_add</mat-icon>
-      <div>New user registered. <small>59 minutes ago</small></div>
-    </div>
-
-    <h3>Activities</h3>
-    <div class="activity">Changed the style. <small>Just now</small></div>
-  </mat-sidenav> -->
 <mat-sidenav mode="side" position="end" opened class="notifications-panel">
-
-  <!-- Notifications -->
   <h3 class="panel-title">Notifications</h3>
 
   <div class="notification-item hover-highlight">
@@ -217,8 +155,6 @@ Hover on Toolbar
       <div class="time">Today, 11:59 AM</div>
     </div>
   </div>
-
-  <!-- Activities -->
   <h3 class="panel-title">Activities</h3>
 
   <div class="activity-timeline">
@@ -262,8 +198,6 @@ Hover on Toolbar
       </div>
     </div>
   </div>
-
-  <!-- Recent contacts -->
   <div class="recent-contacts-section">
     <div class="section-header hover-highlight" (click)="recentExpanded = !recentExpanded">
       <mat-icon class="chevron">{{ recentExpanded ? 'expand_less' : 'expand_more' }}</mat-icon>

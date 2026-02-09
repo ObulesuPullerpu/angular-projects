@@ -5,12 +5,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 
 interface Product {
-  // name: string;
   description: string;
   originalPrice: number;
   salePrice: number;
   rating: number;
-  imageUrl: string;      // placeholder or real URL
+  imageUrl: string;  
   isOnSale: boolean;
 }
 @Component({
