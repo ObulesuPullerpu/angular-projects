@@ -3,9 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { BaseChartDirective } from 'ng2-charts';
 import { ChartConfiguration, ChartData, ChartType } from 'chart.js';
-import { ReviewsCard } from '../reviews-card/reviews-card';
 @Component({
   selector: 'app-spendings-card',
   standalone: true,
@@ -14,15 +12,12 @@ import { ReviewsCard } from '../reviews-card/reviews-card';
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    BaseChartDirective,
-    ReviewsCard,
   ],
   templateUrl: './spendings-card.html',
   styleUrl: './spendings-card.scss'
 })
 export class SpendingsCard {
 
-  @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
   public doughnutChartOptions: ChartConfiguration['options'] = {
     responsive: true,
