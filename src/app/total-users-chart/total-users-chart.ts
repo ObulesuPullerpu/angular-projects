@@ -49,7 +49,6 @@ export type ChartOptions = {
 export class TotalUsersChart {
 
   chartOptions: ChartOptions = {
-
     series: [
         {
         name: 'Total Users',
