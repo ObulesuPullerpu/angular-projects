@@ -10,6 +10,7 @@ import { TaskCard } from '../task-card/task-card';
 import { BookSelled } from '../book-selled/book-selled';
 import { ProductList } from '../product-list/product-list';
 import { TotalUsersChart } from '../total-users-chart/total-users-chart';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -32,4 +33,11 @@ CommonModule,
 })
 export class Dashboard {
 
+
+  constructor(
+    public router:Router
+  ){
+
+     this.router.navigateByUrl('/total-users-chart');
+  }
 }

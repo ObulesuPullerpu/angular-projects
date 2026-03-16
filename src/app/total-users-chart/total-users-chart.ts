@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { NgApexchartsModule } from 'ng-apexcharts';
-import Chart from 'chart.js/auto';
-
-
 import {
   ApexAxisChartSeries,
   ApexChart,
@@ -87,7 +84,7 @@ export class TotalUsersChart {
     },
 
     stroke: {
-      curve: 'smooth',   // ✅ now typed correctly
+      curve: 'smooth',  
       width: 2
     },
 
